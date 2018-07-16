@@ -1,6 +1,7 @@
 package com.example.dell.notesreminder_todoalarmyapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
@@ -14,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.dell.notesreminder_todoalarmyapp.Notes.NotesActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout mDrawerLayout;
@@ -106,6 +109,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void perform_action(View view){
 
         Toast.makeText(this,"kam kiya",Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, NotesActivity.class);
+        startActivity(intent);
+
 //        if (textView.isPressed())
 //            textView.setBackground(getResources().getDrawable(R.drawable.clickcircle));
 //        if (!textView.isPressed())
