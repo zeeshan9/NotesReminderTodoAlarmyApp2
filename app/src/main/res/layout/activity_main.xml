@@ -33,20 +33,31 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:background="@color/startblue">
-                    </LinearLayout>
 
-                    <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:background="#CCCCCC">-->
-                    <!--<ScrollView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:fitsSystemWindows="true">-->
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="#FFFFFF"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+
+                                android:gravity="center"
+                                android:background="@drawable/taskcircle"/>
+                        </LinearLayout>
+                    </android.support.constraint.ConstraintLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -90,6 +101,7 @@
                                         android:layout_marginStart="20dp"
                                         android:layout_marginTop="20dp"
                                         android:text="Notes"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
                                         android:gravity="center"
                                         android:textColor="#FFFFFF"
                                         android:background="@drawable/change_image"
@@ -106,7 +118,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
                                 android:orientation="horizontal"
                                 >
 
@@ -204,7 +216,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
                                 android:orientation="horizontal"
                                 >
 
@@ -282,7 +294,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
                                 android:orientation="horizontal"
                                 >
 
