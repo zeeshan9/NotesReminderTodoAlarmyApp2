@@ -1,304 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
-
     >
-    <android.support.constraint.ConstraintLayout
+
+
+    <android.support.v4.widget.DrawerLayout
+
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:layout_alignParentLeft="true">
 
-        <!--===========================================-->
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/content_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="#e94e7ede">
-            </LinearLayout>
-
-            <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="#CCCCCC">-->
-            <!--<ScrollView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:fitsSystemWindows="true">-->
-
-            <LinearLayout
+            android:layout_height="match_parent">
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                >
 
-                <!--Three inner linear layouts-->
+                <!--===========================================-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@color/startblue">
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="#CCCCCC">-->
+                    <!--<ScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:fitsSystemWindows="true">-->
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="vertical">
 
-                        <android.support.constraint.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        <!--Three inner linear layouts-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal"
+                                >
 
-                            >
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    >
+<!--<ImageButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/change_image"-->
+    <!--android:onClick="perform_action"-->
+    <!--/>-->
+
+                                    <TextView
+                                        android:id="@+id/feather"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="20dp"
+                                        android:text="Notes"
+                                        android:gravity="center"
+                                        android:textColor="#FFFFFF"
+                                        android:background="@drawable/change_image"
+                                        android:clickable="true"
+                                        android:onClick="perform_action"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    >
 
 
-                            <TextView
-                                android:id="@+id/textView1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginTop="20dp"
-                                android:text="TextView"
-                                android:gravity="center"
-                                android:textColor="#FFFFFF"
-                                android:background="@drawable/circle"
-android:clickable="true"
-                                android:onClick="circle"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </android.support.constraint.ConstraintLayout>
+                                    <!--<android.support.v7.widget.AppCompatImageView-->
+                                    <!--android:id="@+id/circle_imageid"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:background="@drawable/clickcircle"-->
+                                    <!--android:layout_marginBottom="20dp"-->
+                                    <!--android:layout_marginEnd="20dp"-->
+                                    <!--android:layout_marginStart="20dp"-->
+                                    <!--android:clickable="true"-->
+                                    <!--android:layout_marginTop="20dp"-->
+                                    <!--android:onClick="perform_action"-->
+                                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                                    <!--app:layout_constraintTop_toTopOf="parent"/>-->
+                                    <TextView
+                                        android:id="@+id/textView13"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="20dp"
+                                        android:text="TextView"
+                                        android:background="@drawable/circle"
+                                        android:gravity="center"
+                                        android:textColor="#FFFFFF"
+
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--    @2nd Linear Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    >
+
+
+                                    <TextView
+                                        android:id="@+id/textView14"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="20dp"
+                                        android:text="TextView"
+                                        android:gravity="center"
+                                        android:textColor="#FFFFFF"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:background="@drawable/circle"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    >
+
+
+                                    <TextView
+                                        android:id="@+id/textView15"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="20dp"
+                                        android:text="TextView"
+                                        android:gravity="center"
+                                        android:textColor="#FFFFFF"
+                                        android:background="@drawable/circle"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    >
+
+
+                                    <TextView
+                                        android:id="@+id/textView16"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="20dp"
+                                        android:text="TextView"
+                                        android:gravity="center"
+                                        android:textColor="#FFFFFF"
+                                        android:background="@drawable/circle"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    >
+
+
+                                    <TextView
+                                        android:id="@+id/textView17"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginTop="20dp"
+                                        android:text="TextView"
+                                        android:gravity="center"
+                                        android:textColor="#FFFFFF"
+                                        android:background="@drawable/circle"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal"
-                        >
 
-                        <android.support.constraint.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                    <!--</ScrollView>-->
 
-                            >
-
-
-                            <TextView
-                                android:id="@+id/textView13"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginTop="20dp"
-                                android:text="TextView"
-                                android:gravity="center"
-                                android:textColor="#FFFFFF"
-                                android:background="@drawable/circle"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </android.support.constraint.ConstraintLayout>
-
-                    </LinearLayout>
-
+                    <!--</LinearLayout>-->
                 </LinearLayout>
-
-                <!--    @2nd Linear Layout-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal"
-                        >
-
-                        <android.support.constraint.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            >
+            </android.support.constraint.ConstraintLayout>
 
 
-                            <TextView
-                                android:id="@+id/textView14"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginTop="20dp"
-                                android:text="TextView"
-                                android:gravity="center"
-                                android:textColor="#FFFFFF"
-                                android:background="@drawable/circle"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal"
-                        >
-
-                        <android.support.constraint.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            >
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#4e7ede"
+            app:menu="@menu/drawer_menu"></android.support.design.widget.NavigationView>
 
 
-                            <TextView
-                                android:id="@+id/textView15"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginTop="20dp"
-                                android:text="TextView"
-                                android:gravity="center"
-                                android:textColor="#FFFFFF"
-                                android:background="@drawable/circle"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </android.support.constraint.ConstraintLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal"
-                        >
-
-                        <android.support.constraint.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            >
-
-
-                            <TextView
-                                android:id="@+id/textView16"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginTop="20dp"
-                                android:text="TextView"
-                                android:gravity="center"
-                                android:textColor="#FFFFFF"
-                                android:background="@drawable/circle"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </android.support.constraint.ConstraintLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="30dp"
-                        android:orientation="horizontal"
-                        >
-
-                        <android.support.constraint.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            >
-
-
-                            <TextView
-                                android:id="@+id/textView17"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="20dp"
-                                android:layout_marginEnd="20dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginTop="20dp"
-                                android:text="TextView"
-                                android:gravity="center"
-                                android:textColor="#FFFFFF"
-                                android:background="@drawable/circle"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </android.support.constraint.ConstraintLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--</ScrollView>-->
-
-            <!--</LinearLayout>-->
-        </LinearLayout>
-    </android.support.constraint.ConstraintLayout>
-<android.support.v4.widget.DrawerLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/drawer_layout">
-
-    <android.support.design.widget.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:menu="@menu/drawer_menu"
-        android:background="#4e7ede"
-        android:id="@+id/navigation_view"
-        android:layout_gravity="start"></android.support.design.widget.NavigationView>
-
-
-</android.support.v4.widget.DrawerLayout>
+    </android.support.v4.widget.DrawerLayout>
 
 </RelativeLayout>

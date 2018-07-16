@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatImageView;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,13 +20,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle mActionBarDrawerToggle;
     NavigationView mNavigationView;
     TextView textView;
+    AppCompatImageView appCompatImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        textView=(TextView) findViewById(R.id.textView1);
-
+//appCompatImageView=(AppCompatImageView) findViewById(R.id.circle_imageid);
+        textView=(TextView) findViewById(R.id.feather);
+        textView.setClickable(true);
+//appCompatImageView.setOnClickListener(new View.OnClickListener() {
+//    @Override
+//    public void onClick(View view) {
+//        Toast.makeText(MainActivity.this,"onclick eork here",Toast.LENGTH_LONG).show();
+//    }
+//});
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.Open,R.string.Close);
 
@@ -39,6 +47,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
         mNavigationView.setNavigationItemSelectedListener(this);
+
+//        textView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(MainActivity.this,"kam kiya",Toast.LENGTH_SHORT).show();
+//                textView.setBackground(ContextCompat.getDrawable(MainActivity.this,R.drawable.clickcircle));
+//            }
+//        });
 
     }
     @Override
@@ -87,9 +103,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        return false;
 //    }
 
-    public void circle(View view){
+    public void perform_action(View view){
 
         Toast.makeText(this,"kam kiya",Toast.LENGTH_SHORT).show();
-        textView.setBackground(ContextCompat.getDrawable(this,R.drawable.clickcircle));
+//        if (textView.isPressed())
+//            textView.setBackground(getResources().getDrawable(R.drawable.clickcircle));
+//        if (!textView.isPressed())
+//            textView.setBackground(getResources().getDrawable(R.drawable.circle));
+//        textView.setBackground(ContextCompat.getDrawable(this,R.drawable.clickcircle));
     }
 }
